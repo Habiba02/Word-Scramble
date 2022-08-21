@@ -14,7 +14,7 @@ const initTimer = maxTime => {
             maxTime--; //decrement maxTime by 1
             return timeTxt.innerText = maxTime;
         }
-        alert(`Time off! ${userWord.toUpperCase( )} was the correct word`);//timer is finish
+        alert(`Time off! ${correctWord.toUpperCase( )} was the correct word`);//timer is finish
         initGame(); //call initGame to restart
     }, 1000);
 }
@@ -42,7 +42,5 @@ const checkWord = () => {
     alert(`Congrats! ${userWord.toUpperCase( )} is the correct word`);//if user enter the correct word
     initGame();
 }
-checkWord();
-
 refeshBtn.addEventListener("click",initGame);//refresh on refresh button click
 checkBtn.addEventListener("click",checkWord);//check on check button click

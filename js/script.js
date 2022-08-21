@@ -40,7 +40,6 @@ const checkWord = () => {
     if(!userWord) return alert(`Please enter a word`);//if user do not enter anything
     if(userWord !== correctWord) return alert(`Ooops! ${userWord.toUpperCase()} is not the correct word`);//if word does not match the correct one
     alert(`Congrats! ${userWord.toUpperCase( )} is the correct word`);//if user enter the correct word
-    if(!userWord) return alert(`Please enter a word`);//if user do not enter anything
     initGame();
 }
 checkWord();

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+/*dark-blue: #002B5B;
+$light-blue: #256D85;
+$teal: #8FE3CF;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background:  #002B5B;
+}
+.container{
+    background-color: white;
+    padding: 1.5%;
+    margin: auto;
+    border-radius: 5%;
+    width: 450px;
+}
+.container h1{
+    color: #8FE3CF;
+    text-align: center;
+}
+hr{
+    height: 5px;
+    background-color: #8FE3CF;
+    border: none;
+}
+.container .content{
+    margin: 2.5% 0;
+}
+.content .word{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
+    color: #002B5B;
+    letter-spacing: 25px;
+}
+.container input{
+    width: 100%;
+    font-size: medium;
+    height: 30px;
+    margin: 2% 0;
+    outline: none;
+    padding: 3%;
+    border-radius: 5px;
+    border: 3px solid #8FE3CF;
+}
+.content .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1%;
+}
+.buttons button{
+    border-radius: 5px;
+    border: 3px solid #FFFF;
+    outline: none;
+    padding: 1.5%;
+}
+.buttons .check-word{
+    background-color: #8FE3CF;
+    color: white;
+}
+.buttons .refresh-word{
+    background-color: #002B5B;
+    color: white;
+}

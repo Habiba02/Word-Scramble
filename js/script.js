@@ -7,18 +7,6 @@ checkBtn = document.querySelector(".check-word");
 
 let correctWord, timer;
 
-const initTimer = maxTime => {
-    clearInterval(timer);
-    timer = setInterval( () => {
-        if(maxTime>0){
-            maxTime--; //decrement maxTime by 1
-            return timeTxt.innerText = maxTime;
-        }
-        alert(`Time off! ${userWord.toUpperCase( )} was the correct word`);//timer is finish
-        initGame(); //call initGame to restart
-    }, 1000);
-}
-
 const initGame = () => {
     initTimer(30) //call initTimer with passing 30 as maxTime
     let randomObj = words[Math.floor(Math.random() * words.length)]; //get random object
@@ -35,7 +23,17 @@ const initGame = () => {
     console.log(randomObj);
 }
 initGame();
-
+const initTimer = maxTime => {
+    clearInterval(timer);
+    timer = setInterval( () => {
+        if(maxTime>0){
+            maxTime--; //decrement maxTime by 1
+            return timeTxt.innerText = maxTime;
+        }
+        alert(`Time off! ${userWord.toUpperCase( )} was the correct word`);//timer is finish
+        initGame(); //call initGame to restart
+    }, 1000);
+}
 const checkWord = () => {
     let userWord = inputField.value.toLocaleLowerCase();//get user value
     if(!userWord) return alert(`Please enter a word`);//if user do not enter anything
